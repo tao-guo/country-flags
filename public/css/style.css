@@ -1,0 +1,16 @@
+/* Common styles */
+html, body {
+  margin: 0px;
+  height: 100%;
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flag-container {
+  position: relative;
+}

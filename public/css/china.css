@@ -1,0 +1,75 @@
+/* Flag of China */
+:root {
+  --unit: calc(80vh/20);
+  --flag-width: calc(var(--unit)*32);
+  --flag-height: calc(var(--unit)*20);
+  --big-star-size: calc(var(--unit)*6);
+  --small-star-size: calc(var(--unit)*2);
+  --star1-top: calc(var(--unit)*2);
+  --star1-left: calc(var(--unit)*2);
+  --star2-top: calc(var(--unit)*1);
+  --star2-left: calc(var(--unit)*9);
+  --star3-top: calc(var(--unit)*3);
+  --star3-left: calc(var(--unit)*11);
+  --star4-top: calc(var(--unit)*6);
+  --star4-left: calc(var(--unit)*11);
+  --star5-top: calc(var(--unit)*8);
+  --star5-left: calc(var(--unit)*9);
+}
+
+@media screen and (max-width: 500px) {
+  :root {
+    --unit: calc(80vw/32);
+  }
+}
+
+.china.flag-container {
+  background: red;
+  width: var(--flag-width);
+  height: var(--flag-height);
+}
+
+.china .star {
+  position: absolute;
+  color: yellow;
+  text-align: center;
+  line-height: 100%;
+}
+
+.china .big-star {
+  width: var(--big-star-size);
+  height: var(--big-star-size);
+  font-size: var(--big-star-size);
+}
+
+.china .small-star {
+  width: var(--small-star-size);
+  height: var(--small-star-size);
+  font-size: var(--small-star-size);
+}
+
+.china #star1 {
+  top: var(--star1-top);
+  left: var(--star1-left);
+}
+
+.china #star2 {
+  top: var(--star2-top);
+  left: var(--star2-left);
+}
+
+.china #star3 {
+  top: var(--star3-top);
+  left: var(--star3-left);
+}
+
+.china #star4 {
+  top: var(--star4-top);
+  left: var(--star4-left);
+}
+
+.china #star5 {
+  top: var(--star5-top);
+  left: var(--star5-left);
+}
+
