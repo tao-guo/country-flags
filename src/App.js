@@ -1,19 +1,22 @@
 import React, { Component } from 'react';
 import './App.css';
-import {FlagOfChina, FlagOfUS} from './countries';
+import {FlagOfChina, FlagOfUS, FlagOfFrance} from './countries';
 
 class Resize extends Component {
+  getWidth() {
+    return window.innerWidth * 0.4-30;
+  }
+
   constructor() {
     super();
     this.state = {
-      width: window.innerWidth,
-      height: window.innerHeight
+      width: this.getWidth()
     };
     this.updateDimensions = this.updateDimensions.bind(this);
   }
 
   updateDimensions() {
-    this.setState({width: window.innerWidth, height: window.innerHeight});
+    this.setState({width: this.getWidth()});
   }
 
   componentDidMount() {
@@ -25,13 +28,9 @@ class Resize extends Component {
   }
 
   render() {
-    let updateWidth = this.state.width;
-    if (this.props.children.length === 2) {
-      updateWidth = Math.min(this.state.width, this.state.height / (1+1.9/1.6) * 1.9) * 0.9;
-    }
     const childrenWithProps = React.Children.map(this.props.children,
       (child) => React.cloneElement(child, {
-        width: updateWidth,
+        width: this.state.width,
       })
     );
 
@@ -48,6 +47,7 @@ function App() {
     <Resize>
       <FlagOfChina />
       <FlagOfUS />
+      <FlagOfFrance />
     </Resize>
   );
 }
