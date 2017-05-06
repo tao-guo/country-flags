@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import {FlagOfChina, FlagOfUS, FlagOfFrance, FlagOfItaly, FlagOfGermany} from './countries';
-import {FlagOfRussia, UnionFlag} from './countries';
+import * as countries from './countries';
 
 class Resize extends Component {
   getWidth() {
@@ -46,13 +45,14 @@ class Resize extends Component {
 function App() {
   return (
     <Resize>
-      <FlagOfUS />
-      <UnionFlag />
-      <FlagOfChina />
-      <FlagOfFrance />
-      <FlagOfItaly />
-      <FlagOfGermany />
-      <FlagOfRussia />
+      <countries.FlagOfUS />
+      <countries.UnionFlag />
+      <countries.FlagOfChina />
+      <countries.FlagOfGermany />
+      <countries.FlagOfFrance />
+      <countries.FlagOfItaly />
+      <countries.FlagOfRussia />
+      <countries.FlagOfSouthKorea />
     </Resize>
   );
 }

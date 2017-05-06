@@ -12,7 +12,7 @@ function FlagOfChina(props) {
   const containerSize = {
     width: unit * 32,
     height: unit * 20,
-    background: 'red'
+    background: 'red',
   };
   const stars = new Array(5).fill('★');
 

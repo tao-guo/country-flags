@@ -5,6 +5,7 @@ import FlagOfItaly from './Italy';
 import FlagOfGermany from './Germany';
 import FlagOfRussia from './Russia';
 import UnionFlag from './UnitedKingdom';
+import FlagOfSouthKorea from './SouthKorea';
 
 export {
   FlagOfChina,
@@ -13,5 +14,6 @@ export {
   FlagOfItaly,
   FlagOfGermany,
   FlagOfRussia,
-  UnionFlag
+  UnionFlag,
+  FlagOfSouthKorea
 };
