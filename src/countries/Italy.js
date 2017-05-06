@@ -1,12 +1,12 @@
 import React from 'react';
 
-function FlagOfFrance(props) {
+function FlagOfItaly(props) {
   const containerSize = {
     width: props.width,
     height: props.width/1.5,
   };
 
-  const colors = ['#009246', '#F1F2F1', '#CE2B37'];
+  const colors = ['#0055A4', '#FFFFFF', '#EF4135'];
   const colStyles = new Array(3).fill(null).map((v, i) => {
     return {
       display: 'inline-block',
@@ -17,7 +17,7 @@ function FlagOfFrance(props) {
   });
 
   return (
-    <div className="flag-container france" style={containerSize}>
+    <div className="flag-container italy" style={containerSize}>
       {colStyles.map((v, i) =>
         <div style={v} key={i}></div>
       )}
@@ -25,8 +25,8 @@ function FlagOfFrance(props) {
   );
 }
 
-FlagOfFrance.defaultProps = {
+FlagOfItaly.defaultProps = {
   width: Math.min(window.innerWidth, window.innerHeight*1.5) * 0.8
 };
-export default FlagOfFrance;
+export default FlagOfItaly;
  

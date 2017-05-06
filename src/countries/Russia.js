@@ -1,23 +1,22 @@
 import React from 'react';
 
-function FlagOfFrance(props) {
+function FlagOfRussia(props) {
   const containerSize = {
     width: props.width,
-    height: props.width/1.5,
+    height: props.width*2/3,
   };
 
-  const colors = ['#009246', '#F1F2F1', '#CE2B37'];
+  const colors = ['#FFFFFF', '#0039A6', '#D52B1E'];
   const colStyles = new Array(3).fill(null).map((v, i) => {
     return {
-      display: 'inline-block',
-      width: '33.33%',
-      height: '100%',
+      height: '33.33%',
+      width: '100%',
       background: colors[i]
     }
   });
 
   return (
-    <div className="flag-container france" style={containerSize}>
+    <div className="flag-container russia" style={containerSize}>
       {colStyles.map((v, i) =>
         <div style={v} key={i}></div>
       )}
@@ -25,8 +24,7 @@ function FlagOfFrance(props) {
   );
 }
 
-FlagOfFrance.defaultProps = {
+FlagOfRussia.defaultProps = {
   width: Math.min(window.innerWidth, window.innerHeight*1.5) * 0.8
 };
-export default FlagOfFrance;
- 
+export default FlagOfRussia;
