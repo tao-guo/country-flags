@@ -42,8 +42,8 @@ function FlagOfUS(props) {
 
   const blueAreaStarsStyle = {
     position: 'relative',
-    top: - hUnit / 2,
-    left: - wUnit / 2
+    bottom: hUnit / 2,
+    right: wUnit / 2
   }
 
   function starStyle(row, col) {

@@ -1,0 +1,110 @@
+/* Flag of US */
+:root {
+  --unit: calc(80vh/10);
+  --flag-width: calc(var(--unit)*19);
+  --flag-height: calc(var(--unit)*10);
+  --star-size: calc(var(--unit)*0.61);
+  --h-unit: calc(var(--unit) * 0.538);
+  --w-unit: calc(var(--unit) * 0.633);
+}
+
+@media screen and (max-width: 500px) {
+  :root {
+    --unit: calc(80vw/19);
+  }
+}
+
+.us.flag-container {
+  width: var(--flag-width);
+  height: var(--flag-height);
+}
+
+.us .stripe {
+  width: var(--flag-width);
+  height: calc(var(--flag-height)/13)
+}
+
+.us .red {
+  background: #B22234
+}
+
+.us .white {
+  background: #FFFFFF
+}
+
+.us .blue-area {
+  background: #3C3B6E;
+  position: absolute;
+  height: 53.85%;
+  width: 40%;
+  top: 0;
+  left: 0
+}
+
+.us .blue-area-stars {
+  position: relative;
+  bottom: calc(var(--h-unit)/2);
+  right: calc(var(--w-unit)/2);
+}
+
+.us .col-shift {
+  position: relative;
+  left: var(--w-unit);
+}
+
+.us .stars-row-1 .star {
+  top: var(--h-unit);
+}
+.us .stars-row-2 .star {
+  top: calc(var(--h-unit)*2);
+}
+.us .stars-row-3 .star {
+  top: calc(var(--h-unit)*3);
+}
+.us .stars-row-4 .star {
+  top: calc(var(--h-unit)*4);
+}
+.us .stars-row-5 .star {
+  top: calc(var(--h-unit)*5);
+}
+.us .stars-row-6 .star {
+  top: calc(var(--h-unit)*6);
+}
+.us .stars-row-7 .star {
+  top: calc(var(--h-unit)*7);
+}
+.us .stars-row-8 .star {
+  top: calc(var(--h-unit)*8);
+}
+.us .stars-row-9 .star {
+  top: calc(var(--h-unit)*9);
+}
+
+.us .col1 {
+  left: calc(var(--w-unit)*1);
+}
+.us .col2 {
+  left: calc(var(--w-unit)*3);
+}
+.us .col3 {
+  left: calc(var(--w-unit)*5);
+}
+.us .col4 {
+  left: calc(var(--w-unit)*7);
+}
+.us .col5 {
+  left: calc(var(--w-unit)*9);
+}
+.us .col6 {
+  left: calc(var(--w-unit)*11);
+}
+
+.us .star {
+  text-align: center;
+  color: white;
+  position: absolute;
+  font-size:  var(--star-size);
+  line-height: 100%;
+  height: var(--star-size);
+  width: var(--star-size)
+}
