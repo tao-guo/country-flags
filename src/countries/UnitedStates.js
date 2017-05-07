@@ -62,7 +62,7 @@ function FlagOfUS(props) {
   }
 
   return (
-    <div className="flag-container us" style={containerSize}>
+    <div className="flag--us" style={containerSize}>
       {stripeStyles.map((stripe, i) =>
         <div style={stripe} key={i}></div>
       )}

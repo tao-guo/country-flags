@@ -35,7 +35,7 @@ function FlagOfSouthKorea(props) {
     background: '#003478'
   };
 
-  const leftDiagStyle = {
+  const taegeukStyle = {
     position: 'absolute',
     left: unit,
     top: unit * 0.75,
@@ -62,17 +62,64 @@ function FlagOfSouthKorea(props) {
     borderRadius: '50%'
   }
 
+  const trigramStyle = {
+    position: 'absolute',
+    width: unit / 2,
+    height: unit / 3,
+  }
+
+  const tdeg=Math.atan(3/2)/Math.PI*180;
+  const leftTrigStyle = {
+    position: 'absolute',
+    top: unit,
+    left: unit * 1.5,
+    transform: `rotate(${tdeg}deg)`,
+  }
+  const rightTrigStyle = {
+    position: 'absolute',
+    top: unit,
+    left: unit * 1.5,
+    transform: `rotate(-${tdeg}deg)`,
+  }
+
   return (
-      <div className="flag-container south-korea" style={containerStyle}>
+      <div className="flag--south-korea" style={containerStyle}>
         <div style={circleStyle}>
           <div style={bigRedStyle}></div>
           <div style={bigBlueStyle}></div>
         </div>
-        <div style={leftDiagStyle}>
+        <div style={taegeukStyle}>
           <div style={smallRedStyle}></div>
           <div style={smallBlueStyle}></div>
         </div>
-        <div style={rightDiagStyle}></div>
+          <div style={leftTrigStyle}>
+            <div style={{...trigramStyle, left: -unit*0.25, top: -unit*1.0833}}>
+              <div style={{position: 'relative', height: unit/12, background: 'black', margin: unit/48}}> </div>
+              <div style={{position: 'relative', zIndex: 99, height: unit/12, background: 'black', margin: unit/48}}> </div>
+              <div style={{position: 'relative', height: unit/12, background: 'black', margin: unit/48}}> </div>
+              <div style={{zIndex: 0, height: unit/3, width: unit/24, position: 'absolute', left: (1/4-1/48)*unit, top: 0, background: 'white'}}> </div>
+            </div>
+            <div style={{...trigramStyle, left: -unit*0.25, bottom: -unit*1.0833}}>
+              <div style={{zIndex: 2, position: 'relative', height: unit/12, background: 'black', margin: unit/48}}> </div>
+              <div style={{position: 'relative', height: unit/12, background: 'black', margin: unit/48}}> </div>
+              <div style={{zIndex: 2, position: 'relative', height: unit/12, background: 'black', margin: unit/48}}> </div>
+              <div style={{zIndex: 1, height: unit/3, width: unit/24, position: 'absolute', left: (1/4-1/48)*unit, top: 0, background: 'white'}}> </div>
+            </div>
+          </div>
+          <div style={rightTrigStyle}>
+            <div style={{...trigramStyle, left: -unit*0.25, top: -unit*1.0833}}>
+              <div style={{height: unit/12, background: 'black', margin: unit/48}}> </div>
+              <div style={{height: unit/12, background: 'black', margin: unit/48}}> </div>
+              <div style={{height: unit/12, background: 'black', margin: unit/48}}> </div>
+              <div style={{zIndex: -1, height: unit/3, width: unit/24, position: 'absolute', left: (1/4-1/48)*unit, top: 0, background: 'white'}}> </div>
+            </div>
+            <div style={{...trigramStyle, left: -unit*0.25, bottom: -unit*1.0833}}>
+              <div style={{position: 'relative', height: unit/12, background: 'black', margin: unit/48}}> </div>
+              <div style={{position: 'relative', height: unit/12, background: 'black', margin: unit/48}}> </div>
+              <div style={{position: 'relative', height: unit/12, background: 'black', margin: unit/48}}> </div>
+              <div style={{zIndex: 1, height: unit/3, width: unit/24, position: 'absolute', left: (1/4-1/48)*unit, top: 0, background: 'white'}}> </div>
+            </div>
+          </div>
       </div>
   );
 }

@@ -98,7 +98,7 @@ function UnionFlag(props) {
   }
 
   return (
-    <div className="flag-container uk" style={containerStyle}>
+    <div className="flag--uk" style={containerStyle}>
       <div style={whiteRow}></div>
       <div style={whiteCol}></div>
       <div style={whiteLeft}>

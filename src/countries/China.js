@@ -31,7 +31,7 @@ function FlagOfChina(props) {
   }
 
   return (
-      <div className="flag-container china" style={containerSize}>
+      <div className="flag--china" style={containerSize}>
         {stars.map((v,i) =>
           <div key={i} style={starStyle(i)}>{v}</div>
         )}
