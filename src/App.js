@@ -13,9 +13,11 @@ function App() {
   return (
     <div>
       {simpleCountries.map((countries) =>
-        countries.map((v) =>
+      <div>
+        {countries.map((v) =>
           <div className={"flag--" + v}></div>
-        )
+        )}
+      </div>
       )}
       <countries.FlagOfUS width="144"/>
       <countries.UnionFlag width="144"/>
