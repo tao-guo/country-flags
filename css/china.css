@@ -56,20 +56,24 @@
 .china #star2 {
   top: var(--star2-top);
   left: var(--star2-left);
+  transform: rotate(-120.96deg);
 }
 
 .china #star3 {
   top: var(--star3-top);
   left: var(--star3-left);
+  transform: rotate(-98.13deg);
 }
 
 .china #star4 {
   top: var(--star4-top);
   left: var(--star4-left);
+  transform: rotate(-74.055deg);
 }
 
 .china #star5 {
   top: var(--star5-top);
   left: var(--star5-left);
+  transform: rotate(-54.34deg);
 }
 
