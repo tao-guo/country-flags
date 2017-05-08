@@ -43,9 +43,6 @@ function FlagOfSouthKorea(props) {
     overflow: 'hidden',
   };
 
-  const rightDiagStyle = {
-  };
-
   const smallRedStyle = {
     display: 'inline-block',
     width: unit / 2,

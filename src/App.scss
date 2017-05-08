@@ -167,21 +167,94 @@ $flag-height: $flag-width*10/16;
 }
 
 .flag--china {
+  $unit: $flag-width/32;
+
   @extend %flag;
+  height: $unit * 20;
+  background: red;
+
+  .star {
+    position: absolute;
+    color: yellow;
+    text-align: center;
+
+  }
+  .star.big {
+    width: $unit * 6;
+    height: $unit * 6;
+    font-size: $unit * 6;
+  }
+  .star.small {
+    width: $unit * 2;
+    height: $unit * 2;
+    font-size: $unit * 2;
+  }
 }
 
 .flag--us {
+  $height: $flag-width / 1.9;
+  $hUnit: $height * 0.0538;
+  $wUnit: $height * 0.0633;
+
   @extend %flag;
+  height: $height;
+
+  .red-stripe {
+    height: $height / 13;
+    background: #B22234;
+  }
+  .white-stripe {
+    height: $height / 13;
+    background: #FFFFFF;
+  }
+
+  .blue-area {
+    background: #3C3B6E;
+    position: absolute;
+    height: 53.85%;
+    width: 40%;
+    top: 0;
+    left: 0
+  }
+
+  .blue-area-stars {
+    position: relative;
+    bottom: $hUnit / 2;
+    right: $wUnit / 2;
+  }
+
+  .star {
+    $size: $height * 0.0616;
+    text-align: center;
+    color: white;
+    position: absolute;
+    font-size: $size;
+    line-height: 100%;
+    height: $size;
+    width: $size
+  }
 }
 
 .flag--uk {
+  $height: $flag-width / 2;
+  $unit: $flag-width / 60;
+
   @extend %flag;
+  height: $height;
+  background: #002776;
+  position: relative;
+  overflow: hidden;
+
+  .white {
+    position: absolute;
+    background: #FFFFFF;
+  }
+  .red {
+    position: absolute;
+    background: #C60C30;
+  }
 }
 
 .flag--south-korea {
   @extend %flag;
 }
-
-
-
-

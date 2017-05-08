@@ -5,14 +5,6 @@ function UnionFlag(props) {
   const height = props.width / 2;
   const unit = width / 60;
 
-  const containerStyle = {
-    width: width,
-    height: height,
-    background: '#002776',
-    position: 'relative',
-    overflow: 'hidden'
-  };
-
   const whiteStyle = {
     background: '#FFFFFF',
     position: 'absolute',
@@ -98,7 +90,7 @@ function UnionFlag(props) {
   }
 
   return (
-    <div className="flag--uk" style={containerStyle}>
+    <div className="flag--uk">
       <div style={whiteRow}></div>
       <div style={whiteCol}></div>
       <div style={whiteLeft}>
