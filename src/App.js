@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import * as countries from './countries';
 
 const simpleCountries = [
@@ -11,17 +11,21 @@ const simpleCountries = [
 function App() {
   return (
     <div>
-      {simpleCountries.map((countries) =>
+      {simpleCountries.map((countries, i) =>
       <div>
-        {countries.map((v) =>
-          <div className={"flag--" + v}></div>
-        )}
+        <hr/>
+        <div key={i}>
+          {countries.map((v, j) =>
+          <div className={"flag--" + v} key={j}></div>
+          )}
+        </div>
       </div>
       )}
-      <countries.FlagOfUS width="144"/>
-      <countries.UnionFlag width="144"/>
-      <countries.FlagOfChina width="144"/>
-      <countries.FlagOfSouthKorea width="144"/>
+      <hr/>
+      <countries.FlagOfUS width={144}/>
+      <countries.UnionFlag width={144}/>
+      <countries.FlagOfChina width={144}/>
+      <countries.FlagOfSouthKorea width={144}/>
     </div>
   );
 }
