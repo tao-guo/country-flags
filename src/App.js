@@ -5,7 +5,7 @@ const simpleCountries = [
   ['poland', 'ukraine'],
   ['russia', 'bulgaria', 'germany', 'netherlands', 'lithuania', 'austria', 'hungary', 'estonia', 'spain'],
   ['italy', 'belgium', 'france', 'romania'],
-  ['denmark', 'finland', 'sweden', 'iceland', 'norway', 'switzeland']
+  ['denmark', 'finland', 'sweden', 'iceland', 'norway']
 ];
 
 function App() {

@@ -3,6 +3,7 @@ import React from 'react';
 function UnionFlag(props) {
   return (
     <div className="flag--uk">
+      <div className="wrapper">
       <div className="white row"></div>
       <div className="white col"></div>
       <div className="white diangle left">
@@ -15,6 +16,7 @@ function UnionFlag(props) {
       </div>
       <div className="red row"></div>
       <div className="red col"></div>
+      </div>
     </div>
   );
 }

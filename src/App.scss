@@ -25,15 +25,16 @@ $flag-height: $flag-width*10/16;
   border: 1px solid #999;
   display: inline-block;
   position: relative;
-  margin: 1em;
+  margin: 16px;
   box-shadow: 1px 1px 1px #CCC;
   transition: all .5s;
   
-  // &::after{
-  //   content: attr(class);
-  //   line-height: 1em
-  // }
+  &::after{
+    content: attr(class);
+    line-height: 2.5 * $flag-height;
+  }
   
+ 
   &:hover{
     transform: scale(1.5);
   }
@@ -177,7 +178,6 @@ $flag-height: $flag-width*10/16;
     position: absolute;
     color: yellow;
     text-align: center;
-
   }
   .star.big {
     width: $unit * 6;
@@ -225,9 +225,13 @@ $flag-height: $flag-width*10/16;
   @extend %flag;
   height: $height;
   background: #002776;
-  position: relative;
-  overflow: hidden;
 
+  .wrapper {
+    width: $flag-width;
+    height: $height;
+    position: absolute;
+    overflow: hidden;
+  }
   .white {
     position: absolute;
     background: #FFFFFF;
